@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
           </div>
         ))}
       </div>
-      <Button />
+        <Button variant={"tertiary"}>Let's Talk</Button>
     </div>
   );
 };
