@@ -12,7 +12,8 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="w-full flex flex-col justify-center gap-[30px] pt-[115px] relative">
+    <div className="w-full ">
+      <div className="relative w-full flex flex-col justify-center gap-[30px] pt-[115px] h-[100dvh]">
       <div className="flex flex-col justify-center items-center">
         <p className="text-[75px] font-bold bg-gradient-to-b from-white to-[#E1BBFB] bg-[length:100%_100%] text-transparent bg-clip-text">
           Turning Vision
@@ -51,6 +52,7 @@ const HeroSection = () => {
       </div>
       <div className="flex w-full justify-center mt-[30px]">
         <Image src={cardImage7} alt="" />
+      </div>
       </div>
     </div>
   );

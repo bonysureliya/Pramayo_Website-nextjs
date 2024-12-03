@@ -30,7 +30,7 @@ const buttonStyles = cva(
         primary: "h-[50px] w-[150px] bg-[#FFF] flex justify-center items-center rounded-[12px] text-[16px] text-black font-semibold  shadow-[0_-6px_10px_0_rgba(0,0,0,0.30)]",
         secondary:"h-[50px] w-[150px] bg-[#000] flex justify-center items-center rounded-[12px] text-[16px] !text-white font-semibold shadow-[0_-1px_2px_0_rgba(143,182,255,0.25),_0_-5px_15px_0_rgba(19,20,94,0.98)_inset]",
         tertiary: "h-[50px] w-[150px] border border-white flex justify-center items-center rounded-[12px] text-[16px] !text-white font-semibold",
-
+        fournary: "h-[50px] w-[250px] rounded-[12px] bg-[#F7FDFF] shadow-[inset_-1px_-7px_17px_0px_#C9A1FF] text-[#0A0E26] text-[20px]"
       }
     },
     defaultVariants: {
