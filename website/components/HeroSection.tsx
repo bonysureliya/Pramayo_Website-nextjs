@@ -1,14 +1,21 @@
+"use client";
 import React from "react";
 import Button from "./Button";
 import cardImage from "@/public/Rectangle 8@2x.svg";
 import cardImage2 from "@/public/Rectangle 9.svg";
-import cardImage3 from  "@/public/Rectangle 10.svg";
-import cardImage4 from  "@/public/Rectangle 81.svg";
-import cardImage5 from  "@/public/Rectangle 91.svg";
-import cardImage6 from  "@/public/Rectangle 101.svg";
-import cardImage7 from  "@/public/Rectangle 4.svg";
-
+import cardImage3 from "@/public/Rectangle 10.svg";
+import cardImage4 from "@/public/Rectangle 81.svg";
+import cardImage5 from "@/public/Rectangle 91.svg";
+import cardImage6 from "@/public/Rectangle 101.svg";
+import cardImage7 from "@/public/Rectangle 4.svg";
+import FallFromTop from "./FallFromTop";
+import FadeInImage from "./FadeInImage";
 import Image from "next/image";
+import box from "../public/Box1.svg"
+import box2 from "../public/box2.svg"
+import box3 from "../public/box3.svg"
+import uibox from "../public/uibox.svg"
+import webbox from "../public/webbox.svg"
 
 const HeroSection = () => {
   return (
@@ -32,28 +39,19 @@ const HeroSection = () => {
         <Button variant={"primary"}>See our Work</Button>
         <Button variant={"secondary"}>Get a Quote</Button>
       </div>
-      <div className="absolute left-[250px] top-[430px] z-[999]">
-        <Image src={cardImage} alt="" />
-      </div>
-      <div className="absolute left-[140px] top-[560px] z-[998]">
-        <Image src={cardImage2} alt="" />
-      </div>
-      <div className="absolute left-[70px] top-[660px]">
-        <Image src={cardImage3} alt="" />
-      </div>
-      <div className="absolute right-[250px] top-[430px] z-[999]">
-        <Image src={cardImage4} alt="" />
-      </div>
-      <div className="absolute right-[140px] top-[560px] z-[998]">
-        <Image src={cardImage5} alt="" />
-      </div>
-      <div className="absolute right-[70px] top-[660px]">
-        <Image src={cardImage6} alt="" />
-      </div>
-      <div className="flex w-full justify-center mt-[30px]">
-        <Image src={cardImage7} alt="" />
-      </div>
-      </div>
+      <Image alt="" src={box} className="absolute top-[250px] left-[-50px]" />
+      <Image alt="" src={webbox} className="absolute top-[90px] left-[150px]" />
+      <Image alt="" src={box2} className="absolute top-[20px] right-[350px]" />
+      <Image alt="" src={uibox} className="absolute top-[150px] right-[50px]" />
+      <Image alt="" src={box3} className="absolute top-[370px] right-[50px]" />
+      <FallFromTop className="absolute left-[250px] top-[430px] z-[999]" yInitial={-500} yAnimate={0} img={cardImage} delay={0} />
+      <FallFromTop className="absolute left-[140px] top-[560px] z-[998]" yInitial={-500} yAnimate={0} img={cardImage2} delay={0.1} />
+      <FallFromTop className="absolute left-[70px] top-[660px]" yInitial={-500} yAnimate={0} img={cardImage3} delay={0.2} />
+      <FallFromTop className="absolute right-[250px] top-[430px] z-[999]" yInitial={-500} yAnimate={0} img={cardImage4} delay={0} />
+      <FallFromTop className="absolute right-[140px] top-[560px] z-[998]" yInitial={-500} yAnimate={0} img={cardImage5} delay={0.1} />
+      <FallFromTop className="absolute right-[70px] top-[660px]" yInitial={-500} yAnimate={0} img={cardImage6} delay={0.2} />
+      <FadeInImage className="flex w-full justify-center mt-[30px]" initialOpacity={0} animateOpacity={1} transitionType="easeIn" duration={2} img={cardImage7} />
+    </div>
     </div>
   );
 };

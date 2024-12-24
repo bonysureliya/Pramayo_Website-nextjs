@@ -1,10 +1,21 @@
 import React from 'react'
 import Button from './Button'
+import ranctagle from '../public/Rectangle 154.svg'
+import Image from 'next/image'
+import uiImageCard from '../public/uiCArd.svg'
+import webcard from '../public/Element (1).svg'
+import imgcard1 from '../public/Element (2).svg'
+import imgcard2 from '../public/Element (3).svg'
 
 const CompanyOverview = () => {
   return (
-    <div className='mt-[400px] flex justify-around'>
-       <div className='h-[590px] w-[640px] ml-[64px] bg-gradient-to-r from-[#060B21] via-[#0E142F] to-[#060B21]'>
+    <div className='mt-[200px] flex justify-around'>
+       <div className='h-[590px] w-[640px] ml-[64px] relative bg-gradient-to-r from-[#060B21] via-[#0E142F] to-[#060B21]'>
+       <Image alt='' className='absolute' src= {ranctagle} />
+       <Image alt='' className='absolute bottom-0 right-12' src= {uiImageCard} />
+       <Image alt='' className='absolute bottom-14 left-10 w-[190px] h-[120px]' src= {webcard} />
+       <Image alt='' className='absolute right-0 bottom-[205px] ' src= {imgcard1} />
+       <Image alt='' className='absolute right-14 top-14 ' src= {imgcard2} />
         <div className='ml-[64px] mt-[64px]'>
             <div className=''>
               <p className='text-[#FFF] text-[50px]'>720+ Project</p>
@@ -17,7 +28,9 @@ const CompanyOverview = () => {
             <div className='mt-[45px]'>
               <Button variant={"fournary"}>Get Started Now</Button>
             </div>
-        </div>    
+        </div>  
+        
+          
        </div>
        
        <div>
