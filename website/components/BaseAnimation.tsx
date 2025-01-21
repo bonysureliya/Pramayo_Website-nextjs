@@ -16,7 +16,7 @@ const BaseAnimation = () => {
         repeat: 1,   // Repeat animation once
         repeatType: 'loop', // Loop the opacity changes
         duration: 1, // Duration for blinking
-        ease: 'ease-in-out',
+        ease: 'easeInOut',
       },
       delay: 1,  // Delay before starting the fade-in effect
     }}

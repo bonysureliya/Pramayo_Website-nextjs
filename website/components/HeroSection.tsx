@@ -14,6 +14,7 @@ import BaseAnimation from "./BaseAnimation";
 const FallFromTop = dynamic(() => import("./FallFromTop"), {
   loading: () => <div>Loading...</div>,
   ssr: false,
+  ssr: false,
 });
 const FadeInImage = dynamic(() => import("./FadeInImage"), {
   loading: () => <div>Loading...</div>,
