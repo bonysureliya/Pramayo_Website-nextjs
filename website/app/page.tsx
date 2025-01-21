@@ -9,6 +9,12 @@ import ProjectCard from "@/components/ProjectCard";
 import VideowithTesxt from "@/components/VideowithTesxt";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { useMediaQuery } from "usehooks-ts";
+import LogoSliderSmall from "@/components/Small/LogoSliderSmall";
+import AboutUsContentSmall from "@/components/Small/AboutUsContentSmall";
+import CompanyOverviewSmall from "@/components/Small/CompanyOverviewSmall";
+import ProjectCardSmall from "@/components/Small/ProjectCardSmall";
+import VideowithTesxtSmall from "@/components/Small/VideowithTesxtSmall";
 
 const Progress = dynamic(() => import("@/components/ui/Spinner"), {
   loading: () => (
@@ -41,19 +47,28 @@ const HeroSection = dynamic(() => import("@/components/HeroSection"), {
   loading: () => <Progress />,
   ssr: false,
 });
+const HeroSectionSmall = dynamic(() => import("@/components/Small/HeroSectionSmall"), {
+  loading: () => <Progress />,
+  ssr: false,
+});
 
 export default function Home() {
+
+  const isSmall = useMediaQuery('(max-width: 420px)')
+
   return (
-    <div className="bg-[#010915]  w-full h-[540dvh] ">
-      <Navbar />
-      <HeroSection />
-      <LogoSlider />
+    <div className="bg-[#010915] text-white  w-full h-[600dvh] ">
+      {/* <Navbar /> */}
+      {/* <HeroSection /> */}
+      {/* <LogoSlider />
       <AboutUsContent />
       <CompanyOverview />
       <ProjectCard />
       <VideowithTesxt />
-      <Footer/>
-{/* <ProjectCard /> */}
+      <Footer/> */}
+      {
+        isSmall  && (<><HeroSectionSmall /> <LogoSliderSmall /> <AboutUsContentSmall/> <CompanyOverviewSmall /> <ProjectCardSmall/> <VideowithTesxtSmall/> </>)
+      }
 
     </div>
   

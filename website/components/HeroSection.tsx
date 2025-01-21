@@ -9,11 +9,11 @@ import cardImage5 from "@/public/Rectangle 91.svg";
 import cardImage6 from "@/public/Rectangle 101.svg";
 import cardImage7 from "@/public/Rectangle 4.svg";
 import BaseAnimation from "./BaseAnimation";
+import { useMediaQuery } from "usehooks-ts";
 
 // Dynamically import components with Next.js
 const FallFromTop = dynamic(() => import("./FallFromTop"), {
   loading: () => <div>Loading...</div>,
-  ssr: false,
   ssr: false,
 });
 const FadeInImage = dynamic(() => import("./FadeInImage"), {
