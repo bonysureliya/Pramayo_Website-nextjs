@@ -9,12 +9,13 @@ import ProjectCard from "@/components/ProjectCard";
 import VideowithTesxt from "@/components/VideowithTesxt";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { useMediaQuery } from "usehooks-ts";
+// import { useMediaQuery } from "usehooks-ts";
 import LogoSliderSmall from "@/components/Small/LogoSliderSmall";
 import AboutUsContentSmall from "@/components/Small/AboutUsContentSmall";
 import CompanyOverviewSmall from "@/components/Small/CompanyOverviewSmall";
 import ProjectCardSmall from "@/components/Small/ProjectCardSmall";
 import VideowithTesxtSmall from "@/components/Small/VideowithTesxtSmall";
+import { useMediaQuery } from "usehooks-ts";
 
 const Progress = dynamic(() => import("@/components/ui/Spinner"), {
   loading: () => (
@@ -47,30 +48,42 @@ const HeroSection = dynamic(() => import("@/components/HeroSection"), {
   loading: () => <Progress />,
   ssr: false,
 });
-const HeroSectionSmall = dynamic(() => import("@/components/Small/HeroSectionSmall"), {
-  loading: () => <Progress />,
-  ssr: false,
-});
+const HeroSectionSmall = dynamic(
+  () => import("@/components/Small/HeroSectionSmall"),
+  {
+    loading: () => <Progress />,
+    ssr: false,
+  }
+);
 
 export default function Home() {
-
-  const isSmall = useMediaQuery('(max-width: 420px)')
+  const isSmall = useMediaQuery("(max-width: 420px)");
+  const isMedium = useMediaQuery("(min-width: 421px) and (max-width: 1023px)");
+  const isLarge = useMediaQuery("(min-width: 1024px)");
 
   return (
-    <div className="bg-[#010915] text-white  w-full h-[600dvh] ">
-      {/* <Navbar /> */}
-      {/* <HeroSection /> */}
-      {/* <LogoSlider />
-      <AboutUsContent />
-      <CompanyOverview />
-      <ProjectCard />
-      <VideowithTesxt />
-      <Footer/> */}
-      {
-        isSmall  && (<><HeroSectionSmall /> <LogoSliderSmall /> <AboutUsContentSmall/> <CompanyOverviewSmall /> <ProjectCardSmall/> <VideowithTesxtSmall/> </>)
-      }
-
+    <div className="bg-[#010915] font-sans text-white  w-full h-[600dvh] ">
+      {isSmall && (
+        <>
+          <HeroSectionSmall />
+          <LogoSliderSmall />
+          <AboutUsContentSmall />
+          <CompanyOverviewSmall />
+          <ProjectCardSmall />
+          <VideowithTesxtSmall />
+        </>
+      )}
+      {isMedium && (<p>Medium Screen </p>)}
+      {isLarge && (
+        <>
+          <HeroSection />
+          <LogoSlider />
+          <AboutUsContent />
+          <CompanyOverview />
+          <ProjectCard />
+          <VideowithTesxt />
+          <Footer />
+        </>)}
     </div>
-  
   );
 }
