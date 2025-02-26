@@ -102,6 +102,7 @@ export default function Home() {
      <LogoSliderLap/>
      <AboutUsContentLap/>
      <CompanyOverviewLap/>
+     <ServicesAnims />
         </>)}
 
 

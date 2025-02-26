@@ -9,8 +9,8 @@ import imgcard2 from '../../public/Element (3).svg'
 
 const CompanyOverviewLap = () => {
   return (
-    <div className='mt-[100px] flex right gap-5 '>
-       <div className='h-[590px] rounded-lg w-[520px] ml-[64px] relative bg-gradient-to-r from-[#060B21] via-[#0E142F] to-[#060B21]'>
+    <div className='mt-[100px] flex gap-16 '>
+       <div className='h-[430px] rounded-lg w-[520px] ml-[64px] relative bg-gradient-to-r from-[#060B21] via-[#0E142F] to-[#060B21]'>
        <Image alt='' className='absolute' src= {ranctagle} />
        <Image alt='' className='absolute bottom-0 right-12' src= {uiImageCard} />
        <Image alt='' className='absolute bottom-14 left-10 w-[190px] h-[120px]' src= {webcard} />
@@ -45,7 +45,7 @@ const CompanyOverviewLap = () => {
                 <p className='text-[10px] text-[#FFF]'>We’re proud to support brands globally.</p>
              </div>
         </div>
-        <div className="h-[130px] w-[500px] rounded-[20px] bg-gradient-to-r from-[#060B21] via-[#0E142F] to-[#0E142F] flex  items-center justify-around mt-[25px]">
+        <div className="h-[130px] w-[550px] rounded-[20px] bg-gradient-to-r from-[#060B21] via-[#0E142F] to-[#0E142F] flex  items-center justify-around mt-[25px]">
              <div> 
                 <p className='text-[20px] font-semibold text-[#FFF]'>Years of </p>
                 <p className='text-[20px] font-semibold text-[#FFF]'>Experience</p>
@@ -56,7 +56,7 @@ const CompanyOverviewLap = () => {
                 <p className='text-[10px] text-[#FFF]'>of time</p>
              </div>
         </div>
-        <div className="h-[130px] w-[500px] rounded-[20px] bg-gradient-to-r from-[#060B21] via-[#0E142F] to-[#0E142F] flex  items-center justify-around mt-[25px]">
+        <div className="h-[130px] w-[550px] rounded-[20px] bg-gradient-to-r from-[#060B21] via-[#0E142F] to-[#0E142F] flex  items-center justify-around mt-[25px]">
              <div> 
                 <p className='text-[20px] font-semibold text-[#FFF]'>Winning</p>
                 <p className='text-[20px] font-semibold text-[#FFF]'>Creativity</p>
