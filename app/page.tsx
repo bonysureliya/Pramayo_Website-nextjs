@@ -22,6 +22,11 @@ import CompanyOverviewMedium from "@/components/medium/CompanyOverviewMedium";
 import ProjectCardMedium from "@/components/medium/ProjectCardMedium";
 import VideowithTesxtMedium from "@/components/medium/VideowithTesxtMedium";
 import ServicesAnims from "@/components/ServicesAnims";
+import HeroSectionLap from "@/components/laptop/HeroSectionLap";
+import NavbarLap from "@/components/laptop/NavbarLap";
+import LogoSliderLap from "@/components/laptop/LogoSliderLap";
+import AboutUsContentLap from "@/components/laptop/AboutUsContentLap";
+import CompanyOverviewLap from "@/components/laptop/CompanyOverviewLap";
 
 const Progress = dynamic(() => import("@/components/ui/Spinner"), {
   loading: () => (
@@ -65,7 +70,8 @@ const HeroSectionSmall = dynamic(
 export default function Home() {
   const isSmall = useMediaQuery("(min-width: 320px) and (max-width: 420px)");
   const isMedium = useMediaQuery("(min-width: 421px) and (max-width: 768px)");
-  const isBig = useMediaQuery("(min-width: 780px)");
+  const isLaptop = useMediaQuery("(min-width: 769px) and (max-width: 1340px)");
+  const isBig = useMediaQuery("(min-width: 1341px)");
   return (
     <div className="bg-[#010915] text-white  w-full h-[700dvh] ">
       {/* <Navbar /> */}
@@ -90,6 +96,15 @@ export default function Home() {
           <VideowithTesxtMedium />{" "}
         </>
       )}
+     {isLaptop && (<>
+     <NavbarLap/>
+     <HeroSectionLap/>
+     <LogoSliderLap/>
+     <AboutUsContentLap/>
+     <CompanyOverviewLap/>
+        </>)}
+
+
 
       {isBig && (
         <>
@@ -103,6 +118,8 @@ export default function Home() {
       <Footer/>
         </>
       )}
+   
+
     </div>
   );
 }
