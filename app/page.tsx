@@ -27,6 +27,8 @@ import NavbarLap from "@/components/laptop/NavbarLap";
 import LogoSliderLap from "@/components/laptop/LogoSliderLap";
 import AboutUsContentLap from "@/components/laptop/AboutUsContentLap";
 import CompanyOverviewLap from "@/components/laptop/CompanyOverviewLap";
+import ProjectCardLap from "@/components/laptop/ProjectCardLap";
+import FooterLap from "@/components/laptop/FooterLap";
 
 const Progress = dynamic(() => import("@/components/ui/Spinner"), {
   loading: () => (
@@ -102,7 +104,10 @@ export default function Home() {
      <LogoSliderLap/>
      <AboutUsContentLap/>
      <CompanyOverviewLap/>
-     <ServicesAnims />
+     <ProjectCardLap/>
+
+
+     <FooterLap/>
         </>)}
 
 

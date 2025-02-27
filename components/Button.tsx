@@ -34,7 +34,8 @@ const buttonStyles = cva(
         fivenary:  "h-[50px] w-[202px] border border-white flex justify-center items-center rounded-[12px] text-[16px] !text-white font-semibold",
         sixnary: "h-[40px] w-[120px] border border-white flex justify-center items-center rounded-[12px] text-[16px] !text-white font-semibold",
         sevenary: "h-[45px] w-[120px] bg-[#FFF] flex justify-center items-center rounded-[12px] text-[12px] text-black font-semibold  shadow-[0_-6px_10px_0_rgba(0,0,0,0.30)]",
-        eightnary:"h-[45px] w-[120px] bg-[#000] flex justify-center items-center rounded-[12px] text-[12px] !text-white font-semibold shadow-[0_-1px_2px_0_rgba(143,182,255,0.25),_0_-5px_15px_0_rgba(19,20,94,0.98)_inset]"
+        eightnary:"h-[45px] w-[120px] bg-[#000] flex justify-center items-center rounded-[12px] text-[12px] !text-white font-semibold shadow-[0_-1px_2px_0_rgba(143,182,255,0.25),_0_-5px_15px_0_rgba(19,20,94,0.98)_inset]",
+        ninenary: "h-[38px] w-[200px] border border-white flex justify-center items-center rounded-[12px] text-[16px] !text-white font-semibold"
       }
     },
     defaultVariants: {
