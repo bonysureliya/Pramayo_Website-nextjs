@@ -29,6 +29,7 @@ import AboutUsContentLap from "@/components/laptop/AboutUsContentLap";
 import CompanyOverviewLap from "@/components/laptop/CompanyOverviewLap";
 import ProjectCardLap from "@/components/laptop/ProjectCardLap";
 import FooterLap from "@/components/laptop/FooterLap";
+import ScrollWheelPicker from "@/components/ScrollWheelPicker";
 
 const Progress = dynamic(() => import("@/components/ui/Spinner"), {
   loading: () => (
@@ -114,14 +115,14 @@ export default function Home() {
 
       {isBig && (
         <>
-          <HeroSection />
+          {/* <HeroSection />
       <LogoSlider />
       <AboutUsContent />
-      <CompanyOverview />
-      <ProjectCard />
-      <ServicesAnims />
-      <VideowithTesxt />
-      <Footer/>
+      <CompanyOverview /> */}
+      {/* <ProjectCard /> */}
+      <ScrollWheelPicker />
+      {/* <VideowithTesxt />
+      <Footer/> */}
         </>
       )}
    

@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-const SpaceButton = () => {
+interface SpaceButtonProps { 
+  text: string
+}
+
+const SpaceButton: React.FC<SpaceButtonProps> = ({text}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isActive, setIsActive] = useState(false);
   
@@ -9,9 +13,9 @@ const SpaceButton = () => {
       <div className="relative">
         <button 
           className={`relative text-lg font-medium border-0 cursor-pointer py-3.5 px-5 flex items-center gap-1 whitespace-nowrap rounded-3xl overflow-hidden transition-all duration-250 transform ${
-            isHovered ? 'scale-110 shadow-[0_0_6em_3em_rgba(225,187,251,0.3),0_0.05em_0_0_rgba(255,255,255,0.8)_inset,0_-0.05em_0_0_rgba(225,187,251,0.1)_inset]' : ''
+            isHovered ? 'scale-110 shadow-[0_0_3em_1.5em_rgba(225,187,251,0.15),0_0.05em_0_0_rgba(255,255,255,0.4)_inset,0_-0.05em_0_0_rgba(225,187,251,0.05)_inset]' : ''
           } ${
-            isActive ? 'scale-100 shadow-[0_0_6em_3em_rgba(225,187,251,0.5),0_0.05em_0_0_rgba(255,255,255,0.8)_inset,0_-0.05em_0_0_rgba(225,187,251,0.1)_inset]' : ''
+            isActive ? 'scale-100 shadow-[0_0_3em_1.5em_rgba(225,187,251,0.25),0_0.05em_0_0_rgba(255,255,255,0.4)_inset,0_-0.05em_0_0_rgba(225,187,251,0.05)_inset]' : ''
           } bg-gradient-to-br from-black to-gray-900`}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -23,9 +27,9 @@ const SpaceButton = () => {
           }}
         >
           <span className={`absolute inset-[0.1em] bg-gradient-to-br rounded-3xl transition-all duration-250 ${
-            isHovered ? 'from-[#E1BBFB]/90 via-transparent to-black' : ''
+            isHovered ? 'from-[#E1BBFB]/45 via-transparent to-black' : ''
           } ${
-            isActive ? 'from-[#E1BBFB]/90 via-transparent to-black' : ''
+            isActive ? 'from-[#E1BBFB]/45 via-transparent to-black' : ''
           }`}></span>
           
           <span className={`absolute w-full aspect-square top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden transition-opacity duration-250 ${
@@ -38,7 +42,7 @@ const SpaceButton = () => {
           } ${
             isActive ? 'font-light animate-[wobble_0.6s_ease-in-out_infinite] text-white' : ''
           }`}>
-            Space
+            {text}
           </label>
         </button>
         <div className="bodydrop"></div>
@@ -63,6 +67,7 @@ const SpaceButton = () => {
           animation-delay: 1s;
           display: none;
           z-index: -1;
+          opacity: 0.5;
         }
         
         label::after {
@@ -77,6 +82,7 @@ const SpaceButton = () => {
           background: linear-gradient(90deg, #E1BBFB, transparent);
           animation: 7s shootingStar ease-in-out infinite;
           animation-delay: 3s;
+          opacity: 0.5;
         }
         
         button span:nth-child(2)::before {
@@ -87,7 +93,7 @@ const SpaceButton = () => {
           width: 2px;
           height: 2px;
           border-radius: 50%;
-          opacity: 1;
+          opacity: 0.5;
           box-shadow:
             140px 20px #E1BBFB,
             425px 20px #E1BBFB,
@@ -115,7 +121,7 @@ const SpaceButton = () => {
           width: 2px;
           height: 2px;
           border-radius: 50%;
-          opacity: 1;
+          opacity: 0.5;
           box-shadow:
             490px 330px #E1BBFB,
             420px 300px #E1BBFB,
@@ -148,11 +154,11 @@ const SpaceButton = () => {
         @keyframes shootingStar {
           0% {
             transform: translateX(0) translateY(0);
-            opacity: 1;
+            opacity: 0.5;
           }
           50% {
             transform: translateX(-55em) translateY(0);
-            opacity: 1;
+            opacity: 0.5;
           }
           70% {
             transform: translateX(-70em) translateY(0);
@@ -169,7 +175,7 @@ const SpaceButton = () => {
             opacity: 0;
           }
           50% {
-            opacity: 1;
+            opacity: 0.5;
           }
           100% {
             opacity: 0;
@@ -203,14 +209,14 @@ const SpaceButton = () => {
         @keyframes blurMove {
           0%, 100% {
             text-shadow:
-              5px 5px 20px rgba(225, 187, 251, 0.8),
-              10px 10px 30px rgba(225, 187, 251, 0.6);
+              5px 5px 10px rgba(225, 187, 251, 0.4),
+              10px 10px 15px rgba(225, 187, 251, 0.3);
           }
           50% {
             filter: blur(1px);
             text-shadow:
-              10px 10px 25px rgba(225, 187, 251, 0.8),
-              15px 15px 35px rgba(225, 187, 251, 0.6);
+              10px 10px 12px rgba(225, 187, 251, 0.4),
+              15px 15px 17px rgba(225, 187, 251, 0.3);
           }
         }
       `}</style>

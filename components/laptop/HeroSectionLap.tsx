@@ -27,6 +27,7 @@ import box2 from "../../public/box2.svg";
 import box3 from "../../public/box3.svg";
 import uibox from "../../public/uibox.svg";
 import webbox from "../../public/webbox.svg";
+import SpaceButton from "../SpaceButton";
 
 const HeroSectionLap = () => {
   return (
@@ -46,18 +47,18 @@ const HeroSectionLap = () => {
         <p className="text-[#FFFFFF99]">captivate and inspire.</p>
       </div>
       <div className="flex space-x-[20px] mt-[20px] w-full justify-center">
-        <Button variant={"sevenary"}>See our Work</Button>
+        <SpaceButton text="See Our Work" />
         <Button variant={"eightnary"}>Get a Quote</Button>
       </div>
       <FallFromTop
-        className="absolute left-[80px] top-[150px] z-[999]"
+        className="absolute left-[80px] top-[150px] z-[998]"
         yInitial={-500}
         yAnimate={0}
         img={stageImage}
         delay={0}
       />
       <FallFromTop
-        className="absolute left-[200px] top-[320px] z-[999]"
+        className="absolute left-[200px] top-[320px] z-[998]"
         yInitial={-500}
         yAnimate={0.2}
         img={cardImage}

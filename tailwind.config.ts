@@ -9,9 +9,6 @@ export default {
   ],
   theme: {
   	extend: {
-  		fontFamily: {
-  			sans: ['Noto Sans']
-  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
