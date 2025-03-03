@@ -15,7 +15,7 @@ const MenuArray: Array<string> = [
 
 const Navbar: React.FC<NavbarProps> = ({}) => {
   return (
-    <div className="flex w-full h-[130px] justify-between items-center px-[64px] text-white font-sans font-medium text-[18px]">
+    <div className="flex w-full h-[130px] justify-between items-center px-[64px] text-white   font-medium text-[18px]">
       <Image priority={true} src={Logo} alt={'Some Name'} />
       <div className="flex space-x-[30px]">
         {MenuArray.map((data, index) => (

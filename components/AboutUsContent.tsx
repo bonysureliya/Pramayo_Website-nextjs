@@ -5,18 +5,18 @@ const AboutUsContent = () => {
     <div className="mt-[150px] w-full flex justify-around items-center">
       <div className="h-[132px] w-[650]">
         <div className="flex gap-5">
-          <p className="text-white font-sans text-[55px] font-semibold">
+          <p className="text-white   text-[55px] font-semibold">
             Specialized
           </p>
-          <p className="text-[#E1BBFB] font-sans text-[55px] font-semibold">
+          <p className="text-[#E1BBFB]   text-[55px] font-semibold">
             Services To
           </p>
         </div>
         <div className="flex gap-5">
-          <p className="text-[#E1BBFB] font-sans text-[55px] font-semibold">
+          <p className="text-[#E1BBFB]   text-[55px] font-semibold">
             Bring
           </p>
-          <p className="text-white font-sans text-[55px] font-semibold">
+          <p className="text-white   text-[55px] font-semibold">
             Your Brand To Life.
           </p>
         </div>

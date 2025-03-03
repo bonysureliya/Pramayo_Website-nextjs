@@ -104,7 +104,7 @@ export default function Home() {
      <HeroSectionLap/>
      <LogoSliderLap/>
      <AboutUsContentLap/>
-     <CompanyOverviewLap/>
+     {/* <CompanyOverviewLap/> */}
      <ProjectCardLap/>
 
 
